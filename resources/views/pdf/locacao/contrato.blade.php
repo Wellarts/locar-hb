@@ -66,7 +66,7 @@
 
 </table>
 <div class="retangulo">
-    <span class="texto">FATURA DE LOCAÇÃO</span>
+    <span class="texto">FATURA DE LOCAÇÃO Nº {{$locacao->id}}</span>
 </div>
 <table>
 </table>
