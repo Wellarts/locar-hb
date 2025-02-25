@@ -284,7 +284,7 @@
         <p align="justify">A devolu&ccedil;&atilde;o do ve&iacute;culo em perfeito estado, em condi&ccedil;&otilde;es equivalentes a observada ao &uacute;ltimo check list de vistoria e ap&oacute;s vistoria feita por v&iacute;deo enviada para o whatsapp do LOCADOR. * Inexist&ecirc;ncia de alugu&eacute;is, multas de tr&acirc;nsito ou multas por descumprimento contratual pendentes por parte do LOCAT&Aacute;RIO.</p>
         </li>
         <li>
-        <p align="justify"><strong>QUANDO N&Atilde;O HOUVER ATRASOS NOS PAGAMENTOS DO ALUGUEL,</strong></p>
+        <p align="justify">QUANDO N&Atilde;O HOUVER ATRASOS NOS PAGAMENTOS DO ALUGUEL,</p>
         </li>
         <li>
             <p align="justify">Ap&oacute;s feita a manuten&ccedil;&atilde;o necess&aacute;ria do ve&iacute;culo, caso haja necessidade.</p>
