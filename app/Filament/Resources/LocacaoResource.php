@@ -57,7 +57,11 @@ class LocacaoResource extends Resource
 
     protected static ?string $navigationGroup = 'Locar';
 
-
+ // Eager loading para evitar consultas N+1
+    protected static function getEagerLoadRelations(): array
+    {
+        return ['cliente', 'veiculo'];
+    }
 
     public static function form(Form $form): Form
     {
@@ -628,7 +632,7 @@ class LocacaoResource extends Resource
                     ->date('d/m/Y'),
                 Tables\Columns\TextColumn::make('hora_saida')
                     ->alignCenter()
-                    ->date('H:m')
+                    ->date('H:i')
                     ->sortable()
                     ->label('Hora Saída'),
                 Tables\Columns\TextColumn::make('data_retorno')
@@ -654,7 +658,7 @@ class LocacaoResource extends Resource
                     }),
                 Tables\Columns\TextColumn::make('hora_retorno')
                     ->alignCenter()
-                    ->date('H:m')
+                    ->date('H:i')
                     ->label('Hora Retorno'),
                 Tables\Columns\TextColumn::make('Km_Percorrido')
                     ->label('Km Total')
@@ -725,10 +729,10 @@ class LocacaoResource extends Resource
                     ->url(fn(Locacao $record): string => route('imprimirLocacao', $record))
                     ->label('Contrato 1')
                     ->openUrlInNewTab(),
-                // Tables\Actions\Action::make('Imprimir')
-                //     ->url(fn(Locacao $record): string => route('imprimirLocacao2', $record))
-                //     ->label('Contrato 2')
-                //     ->openUrlInNewTab(),
+                Tables\Actions\Action::make('Imprimir')
+                    ->url(fn(Locacao $record): string => route('imprimirLocacao2', $record))
+                    ->label('Contrato 2')
+                    ->openUrlInNewTab(),
                 Tables\Actions\EditAction::make()
                     ->modalHeading('Editar locação')
                     ->after(function ($data) {
