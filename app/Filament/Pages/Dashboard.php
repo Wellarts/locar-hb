@@ -168,7 +168,7 @@ class Dashboard extends \Filament\Pages\Dashboard
                 ->title('ATENÇÃO: Troca de óleo próxima')
                 ->body(implode("\n", array_slice($alerts['oleo'], 0, 10)))
                 ->danger()
-                ->persistent(false)
+                //->persistent(false)
                 ->send();
         }
 
@@ -177,7 +177,7 @@ class Dashboard extends \Filament\Pages\Dashboard
                 ->title('ATENÇÃO: Troca de filtro próxima')
                 ->body(implode("\n", array_slice($alerts['filtro'], 0, 10)))
                 ->danger()
-                ->persistent(false)
+                //->persistent(false)
                 ->send();
         }
 
@@ -186,7 +186,7 @@ class Dashboard extends \Filament\Pages\Dashboard
                 ->title('ATENÇÃO: Troca da correia próxima')
                 ->body(implode("\n", array_slice($alerts['correia'], 0, 10)))
                 ->danger()
-                ->persistent(false)
+                //->persistent(false)
                 ->send();
         }
 
@@ -195,7 +195,7 @@ class Dashboard extends \Filament\Pages\Dashboard
                 ->title('ATENÇÃO: Troca da pastilha próxima')
                 ->body(implode("\n", array_slice($alerts['pastilha'], 0, 10)))
                 ->danger()
-                ->persistent(false)
+                //->persistent(false)
                 ->send();
         }
 
@@ -229,7 +229,7 @@ class Dashboard extends \Filament\Pages\Dashboard
                 ->title('ATENÇÃO: Conta a receber com vencimento próximo.')
                 ->body('Do cliente <b>' . $cr->cliente->nome . '</b> no valor de R$ <b>' . $cr->valor_parcela . '</b> com vencimento em <b>' . Carbon::parse($cr->data_vencimento)->format('d/m/Y') . '</b>.')
                 ->success()
-                ->persistent(false)
+                //->persistent(false)
                 ->send();
         }
 
@@ -238,7 +238,7 @@ class Dashboard extends \Filament\Pages\Dashboard
                 ->title('ATENÇÃO: Conta a receber com vencimento para hoje.')
                 ->body('Do cliente <b>' . $cr->cliente->nome . '</b> no valor de R$ <b>' . $cr->valor_parcela . '</b> com vencimento em <b>' . Carbon::parse($cr->data_vencimento)->format('d/m/Y') . '</b>.')
                 ->warning()
-                ->persistent(false)
+                //->persistent(false)
                 ->send();
         }
 
@@ -247,7 +247,7 @@ class Dashboard extends \Filament\Pages\Dashboard
                 ->title('ATENÇÃO: Conta a receber vencida.')
                 ->body('Do cliente <b>' . $cr->cliente->nome . '</b> no valor de R$ <b>' . $cr->valor_parcela . '</b> com vencimento em <b>' . Carbon::parse($cr->data_vencimento)->format('d/m/Y') . '</b>.')
                 ->danger()
-                ->persistent(false)
+                //->persistent(false)
                 ->send();
         }
 
@@ -277,7 +277,7 @@ class Dashboard extends \Filament\Pages\Dashboard
                 ->title('ATENÇÃO: Conta a pagar com vencimento próximo.')
                 ->body('Do fornecedor <b>' . $cp->fornecedor->nome . '</b> no valor de R$ <b>' . $cp->valor_parcela . '</b> com vencimento em <b>' . Carbon::parse($cp->data_vencimento)->format('d/m/Y') . '</b>.')
                 ->success()
-                ->persistent(false)
+                //->persistent(false)
                 ->send();
         }
 
@@ -286,7 +286,7 @@ class Dashboard extends \Filament\Pages\Dashboard
                 ->title('ATENÇÃO: Conta a pagar com vencimento para hoje.')
                 ->body('Do fornecedor <b>' . $cp->fornecedor->nome . '</b> no valor de R$ <b>' . $cp->valor_parcela . '</b> com vencimento em <b>' . Carbon::parse($cp->data_vencimento)->format('d/m/Y') . '</b>.')
                 ->warning()
-                ->persistent(false)
+                //->persistent(false)
                 ->send();
         }
 
@@ -295,7 +295,7 @@ class Dashboard extends \Filament\Pages\Dashboard
                 ->title('ATENÇÃO: Conta a pagar vencida.')
                 ->body('Do fornecedor <b>' . $cp->fornecedor->nome . '</b> no valor de R$ <b>' . $cp->valor_parcela . '</b> com vencimento em <b>' . Carbon::parse($cp->data_vencimento)->format('d/m/Y') . '</b>.')
                 ->danger()
-                ->persistent(false)
+                //->persistent(false)
                 ->send();
         }
     }
